@@ -1,0 +1,28 @@
+
+
+syntax of printf -> printf ( "formatted_string", arguments_list); 
+
+PARMETERS -> 
+
+formatted_string -> it the string the specifies the data to be printed  
+arguments_list -> these are the variables names corresponding to the format specifier 
+
+
+the return value -> the printf function is return  the number of characters printed after 
+successful execution end if in error happend it return (-1); 
+
+thr formatting in c printf can be in type (characters , integer, float, ...)
+
+syntax of format specifier -> %[flags][width][.precision][length]specifier (%d,%c,%s,%p,%x ....)
+
+the  conversions that me printf do ->
+
+• %c Prints a single character.
+• %s Prints a string (as defined by the common C convention).
+• %p The void * pointer argument has to be printed in hexadecimal format.
+• %d Prints a decimal (base 10) number.
+• %i Prints an integer in base 10.
+• %u Prints an unsigned decimal (base 10) number.
+• %x Prints a number in hexadecimal (base 16) lowercase format.
+• %X Prints a number in hexadecimal (base 16) uppercase format.
+• %% Prints a percent sign.
