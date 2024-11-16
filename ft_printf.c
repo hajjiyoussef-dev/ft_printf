@@ -6,10 +6,9 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:28:37 by yhajji            #+#    #+#             */
-/*   Updated: 2024/11/16 02:36:11 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/11/16 14:02:07 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libftprintf.h"
 
@@ -34,10 +33,10 @@ int ft_printf(const char *forma, ...)
         return (-1);
     while (*forma)
     {
-       if (forma[count] != '%')
+        if (forma[count] != '%')
             ft_putchar(forma[count++], &len);
         else if (forma[count] == '%' && forma[count + 1] == '\0')
-            count++;
+            break;
         else
         {
             count++;

@@ -6,7 +6,7 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 02:11:40 by yhajji            #+#    #+#             */
-/*   Updated: 2024/11/16 03:01:30 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/11/16 14:14:19 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,23 @@
 
 void ft_putstr(char *str, int *len)
 {
-    if (!str)
+    if (str == NULL)
     {
-        *len += write(1, "(null)", 6);
+       ft_putchar("null", len);
         return ;
     }
     while (*str)
     {
         ft_putchar(*str, len);
         str++;
-    }   
+    }
 }
 
 
 int main(void)
 {
-    ft_putstr("youssef", 0);
+    int len = 0 ;
+    ft_putstr("youssef \n", &len);
+    printf("%d", len);
+    return (0);
 }
