@@ -33,6 +33,6 @@ int sum(int count, ...)
 
 int main(void)
 {
-    printf("sum is: %d \n" , sum(5,0,2,3,4,5,6));
+    printf("%d", 10000000);
     return (0) ;
 }

@@ -1,13 +1,14 @@
 NAME = libftprintf.a
-SRC = ft_putnbr.c
+SRC = ft_putchar.c
+
 OBJC = ${SRC:.c=.o}
 AR = ar -rc
 RM = rm -f
 CC = CC -Wall -Wextra -Werror 
 
 
-%.o : %.c libftprintf.a
-	${CC} -c $< $@ 
+%.o : %.c libftprintf.h
+	${CC} -c $< -o $@ 
 
 ${NAME} : ${OBJC}
 	${AR} ${NAME} ${OBJC}

@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 15:06:41 by yhajji            #+#    #+#             */
-/*   Updated: 2024/11/16 02:36:49 by yhajji           ###   ########.fr       */
+/*   Created: 2024/11/16 01:20:34 by yhajji            #+#    #+#             */
+/*   Updated: 2024/11/16 01:26:53 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-#define LIBFTPRINTF_H 
+#include  "libftprintf.h"
 
-#include <stdarg.h>
-#include <unistd.h>
-#include <stdio.h>
+void ft_putchar(char c, int *len)
+{
+    write(1, &c, 1);
+    (*len)++;
+}
 
-void ft_putchar(char c, int *len);
-void ft_putstr(char *str, int *len);
 
-#endif

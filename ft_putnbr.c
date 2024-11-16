@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 15:06:41 by yhajji            #+#    #+#             */
-/*   Updated: 2024/11/16 02:36:49 by yhajji           ###   ########.fr       */
+/*   Created: 2024/11/16 02:36:26 by yhajji            #+#    #+#             */
+/*   Updated: 2024/11/16 02:42:46 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-#define LIBFTPRINTF_H 
+#include "libftprintf.h"
 
-#include <stdarg.h>
-#include <unistd.h>
-#include <stdio.h>
-
-void ft_putchar(char c, int *len);
-void ft_putstr(char *str, int *len);
-
-#endif
+void ft_putnbr(int nbr, int *len)
+{
+    if (nbr == -2147483648)
+    {
+        ft_putstr("-2147483648", len);
+        return ;
+    }
+    if (nbr < 0)
+    {
+        ft_putchar('-', len);
+        nbr = -nbr;
+    }
+}
