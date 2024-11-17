@@ -15,23 +15,30 @@
 void ft_puthexlow(unsigned int nbr , int *len)
 {
     char *hex;
-    char c;
 
     hex = "0123456789abcdef";
     if (nbr >= 16)
     {
         ft_puthexlow(nbr / 16, len);
     }
-    c = nbr % 16;
-    ft_putchar(hex[c], len);
+    ft_putchar(hex[nbr % 16], len);
 }
 
 
 // int main(void)
 // {
-//     unsigned int n = 200039383;
-//     int len = 0;
-//     ft_puthexlow(n, &len); 
+//        unsigned int i =  23456782; 
+
+//     int a = -2345;
+//     int len =  0;
+//     ft_puthexlow(i, &len);
+//     write(1,"\n ", 2);
+//     ft_puthexlow(a, &len);
+//     write(1,"\n ", 2);
+//     printf("%x , %x ", i, a);
+//     // unsigned int n = 200039383;
+//     // int len = 0;
+//     // ft_puthexlow(n, &len); 
     
-//     printf("\n%x", n);
+//     // printf("\n%x", n);
 // }

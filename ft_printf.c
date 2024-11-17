@@ -12,59 +12,53 @@
 
 #include "libftprintf.h"
 
-static void help_printf(const char *forma, va_list args, int *len, int *count)
+static void help_printf(char forma, va_list args, int *len)
 {
-    if (forma[*count] == 's')
-        ft_putchar(*va_arg(args, char *), len);
-    else if (forma[*count] == 'c')
-        ft_putchar(va_arg(args, int), len);
-    else if (forma[*count] == 'd' || forma[*count] == 'i')
-        ft_putnbr(va_arg(args, int), len);
-    else if (forma[*count] == '%')
+    if (forma == '%')
         ft_putchar('%', len);
-    else if (forma[*count] == 'p')
+    else if (forma == 's')         
+        ft_putstr(va_arg(args, char *), len);
+    else if (forma == 'c')
+        ft_putchar(va_arg(args, int), len);
+    else if (forma == 'd' || forma == 'i')
+        ft_putnbr(va_arg(args, int), len);
+    else if (forma == 'p')
         ft_putadd(va_arg(args, void *), len);
-    else if (forma[*count] == 'u')
+    else if (forma == 'u')
         ft_putnbru(va_arg(args, unsigned int), len);
-    else if (forma[*count] == 'x')
+    else if (forma == 'x')
         ft_puthexlow(va_arg(args, unsigned int), len);
-        
+    else if (forma == 'X')
+        ft_puthexup(va_arg(args, unsigned int) , len);
+    else 
+        ft_putchar(forma, len);
 }
 
 int ft_printf(const char *forma, ...)
 {
     va_list args;
-    int count;
+    int i;
     int len;
 
     va_start(args, forma);
     len = 0;
-    count = 0;
+    i = 0;
     if (write(1, "", 0) == -1)
         return (-1);
-    while (*forma)
+    while (forma[i])
     {
-        if (forma[count] != '%')
-            ft_putchar(forma[count++], &len);
-        else if (forma[count] == '%' && forma[count + 1] == '\0')
-            count++;
-        else
+        if (forma[i] == '%')
         {
-            count++;
-            help_printf(forma, args, &len, &count);
+            i++;
+            if(forma[i] == '\0')
+                break;
+            help_printf(forma[i], args, &len);
         }
+        else
+            ft_putchar(forma[i], &len);
+        i++;
     }
     va_end(args);
     return (len);
 }
 
-int main(void)
-{
-   // ft_printf("");
-   int p =  42;
-   int *ptr = &p ;
-
-   printf("%p ", ptr);
-   
-   
-}

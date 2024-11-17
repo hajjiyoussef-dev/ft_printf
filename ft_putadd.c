@@ -13,7 +13,7 @@
 #include "libftprintf.h"
 
 
-void    ft_puthex(unsigned long n, int *len)
+static void    ft_puthex(unsigned long n, int *len)
 {
     char *hex = "0123456789abcdef";
     char c;

@@ -1,6 +1,6 @@
 NAME = libftprintf.a
 SRC = ft_putchar.c ft_putstr.c  ft_putnbr.c ft_putadd.c\
-		ft_putnbru.c
+		ft_putnbru.c ft_puthexlow.c ft_puthexup.c ft_printf.c 
 
 OBJC = ${SRC:.c=.o}
 AR = ar -rc
