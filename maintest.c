@@ -31,11 +31,20 @@
 
 // } 
 
+// int main(void)
+// {
+//     unsigned int a = 4294967295;
+//     int u = -42 ;
+//     printf("%u\n", a);
+//     printf("%u", u);
+//     return (0) ;
+// }
+
 int main(void)
 {
     unsigned int a = 4294967295;
     int u = -42 ;
-    printf("%u\n", a);
-    printf("%u", u);
+    printf("%x\n", a);
+    printf("%x", u);
     return (0) ;
 }

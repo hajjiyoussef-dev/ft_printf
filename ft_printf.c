@@ -6,7 +6,7 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:28:37 by yhajji            #+#    #+#             */
-/*   Updated: 2024/11/17 00:54:15 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/11/17 19:34:26 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static void help_printf(const char *forma, va_list args, int *len, int *count)
     else if (forma[*count] == 'u')
         ft_putnbru(va_arg(args, unsigned int), len);
     else if (forma[*count] == 'x')
-        ft_puthexlow(va_arg(args, len), len);
+        ft_puthexlow(va_arg(args, unsigned int), len);
         
 }
 
