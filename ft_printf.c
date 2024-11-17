@@ -6,7 +6,7 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:28:37 by yhajji            #+#    #+#             */
-/*   Updated: 2024/11/16 14:02:07 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/11/17 00:54:15 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,20 @@
 static void help_printf(const char *forma, va_list args, int *len, int *count)
 {
     if (forma[*count] == 's')
-        ft_putchar(va_arg(args, char *), len);
+        ft_putchar(*va_arg(args, char *), len);
+    else if (forma[*count] == 'c')
+        ft_putchar(va_arg(args, int), len);
     else if (forma[*count] == 'd' || forma[*count] == 'i')
         ft_putnbr(va_arg(args, int), len);
+    else if (forma[*count] == '%')
+        ft_putchar('%', len);
+    else if (forma[*count] == 'p')
+        ft_putadd(va_arg(args, void *), len);
+    else if (forma[*count] == 'u')
+        ft_putnbru(va_arg(args, unsigned int), len);
+    else if (forma[*count] == 'x')
+        ft_puthexlow(va_arg(args, len), len);
+        
 }
 
 int ft_printf(const char *forma, ...)
@@ -36,7 +47,7 @@ int ft_printf(const char *forma, ...)
         if (forma[count] != '%')
             ft_putchar(forma[count++], &len);
         else if (forma[count] == '%' && forma[count + 1] == '\0')
-            break;
+            count++;
         else
         {
             count++;
@@ -49,5 +60,11 @@ int ft_printf(const char *forma, ...)
 
 int main(void)
 {
-    ft_printf("%d", 10000000);
+   // ft_printf("");
+   int p =  42;
+   int *ptr = &p ;
+
+   printf("%p ", ptr);
+   
+   
 }

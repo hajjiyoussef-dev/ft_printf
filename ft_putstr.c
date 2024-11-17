@@ -6,7 +6,7 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 02:11:40 by yhajji            #+#    #+#             */
-/*   Updated: 2024/11/16 14:14:19 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/11/16 18:23:02 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,25 @@
 
 void ft_putstr(char *str, int *len)
 {
+    int i;
+
+    i = 0;
     if (str == NULL)
     {
-       ft_putchar("null", len);
-        return ;
+        ft_putstr("(null)", len);
+        return;
     }
-    while (*str)
+    while (str[i] != '\0')
     {
-        ft_putchar(*str, len);
-        str++;
+        ft_putchar(str[i], len);
+        i++;
     }
 }
 
-
-int main(void)
-{
-    int len = 0 ;
-    ft_putstr("youssef \n", &len);
-    printf("%d", len);
-    return (0);
-}
+// int main(void)
+// {
+//     int len = 0 ;
+//     ft_putstr(NULL, &len);
+//     printf(" \n %d", len);
+//     return (0);
+// }

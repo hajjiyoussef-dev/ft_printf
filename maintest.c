@@ -12,27 +12,30 @@
 
 // }
 
-#include <stdarg.h>
-int sum(int count, ...)
-{
-    va_list  args ;  //were the arg it gana store ;
-    va_start(args , count); 
+// #include <stdarg.h>
+// int sum(int count, ...)
+// {
+//     va_list  args ;  //were the arg it gana store ;
+//     va_start(args , count); 
 
-    int i = 0;
-    int s = 0;
-    while (i++ < count)
-    {
-        int x = va_arg(args, int);
-        printf("%d \n" , x); 
-        s += x;
-    }
-    va_end(args);
-    return (s);
+//     int i = 0;
+//     int s = 0;
+//     while (i++ < count)
+//     {
+//         int x = va_arg(args, int);
+//         printf("%d \n" , x); 
+//         s += x;
+//     }
+//     va_end(args);
+//     return (s);
 
-} 
+// } 
 
 int main(void)
 {
-    printf("%d", 10000000);
+    unsigned int a = 4294967295;
+    int u = -42 ;
+    printf("%u\n", a);
+    printf("%u", u);
     return (0) ;
 }
