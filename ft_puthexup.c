@@ -6,10 +6,13 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 19:49:49 by yhajji            #+#    #+#             */
-/*   Updated: 2024/11/17 19:52:30 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/11/17 19:57:09 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void 
+void ft_puthexup(unsigned int nbr, int *len)
+{
+    
+}
