@@ -1,5 +1,3 @@
-
-
 syntax of printf -> printf ( "formatted_string", arguments_list); 
 
 PARMETERS -> 
