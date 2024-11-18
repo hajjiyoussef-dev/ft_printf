@@ -9,8 +9,7 @@
 /*   Updated: 2024/11/18 00:33:21 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static void	ft_puthex(unsigned long n, int *len)
 {
