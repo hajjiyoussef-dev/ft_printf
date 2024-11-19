@@ -25,6 +25,15 @@ the  conversions that me printf do ->
 • %X Prints a number in hexadecimal (base 16) uppercase format.
 • %% Prints a percent sign.
 
+=======
+why we use void * not unsigned long in function "ft_putadd" (%p);
+
+=> The parameter is declared as void *ptr because the function's 
+=> purpose is to handle and represent pointers, not numeric values. 
+=> Using void * ensures semantic clarity, compatibility with all pointer types,
+=> and protection against misuse. It also follows standard C conventions for working with generic pointers. 
+=> Inside the function, the conversion to unsigned long is done for numerical processing,
+=> but the input remains logically a pointer.
 
 -------------------------------------------------------------
 Some tests

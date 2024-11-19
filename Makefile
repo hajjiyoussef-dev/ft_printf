@@ -8,7 +8,7 @@ RM = rm -f
 CC = CC -Wall -Wextra -Werror 
 
 
-%.o : %.c libftprintf.h
+%.o : %.c ft_printf.h
 	${CC} -c $< -o $@ 
 
 ${NAME} : ${OBJC}
