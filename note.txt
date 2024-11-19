@@ -35,6 +35,16 @@ why we use void * not unsigned long in function "ft_putadd" (%p);
 => Inside the function, the conversion to unsigned long is done for numerical processing,
 => but the input remains logically a pointer.
 
+=======
+==> Buffer Management ==>
+Buffer management refers to the process of efficiently handling data buffers in computer systems.
+A buffer is a temporary storage area in memory that holds data while it is being transferred between two locations, 
+such as between a program and a file, or between a device and memory. 
+Buffer management ensures data is handled correctly, 
+efficiently, and without loss during these operations.
+
+==> ===> ====> =====> =======>
+
 -------------------------------------------------------------
 Some tests
 
