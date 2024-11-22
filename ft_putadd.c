@@ -32,7 +32,7 @@ void	ft_putadd(void *ptr, int *len)
 	n = (unsigned long) ptr;
 	ft_putchar('0', len);
 	ft_putchar('x', len);
-	if (!n)
+	if (!ptr)
 	{
 		ft_putchar('0', len);
 		return ;
